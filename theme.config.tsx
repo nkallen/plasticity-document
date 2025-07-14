@@ -48,6 +48,19 @@ const config: DocsThemeConfig = {
     gitTimestamp: ({ timestamp }) => (
         <span>Last updated on {timestamp.toLocaleDateString()}</span>
     ),
+    search: {
+        placeholder: () => {
+            const router = useRouter();
+            const { locale } = router;
+            const translations = {
+                en: "Search documentation...",
+                de: "Dokumentation durchsuchen...",
+                ja: "ドキュメントを検索..."
+            };
+
+            return translations[locale] || translations.en;
+        }
+    },
     useNextSeoProps() {
         const { asPath } = useRouter();
         if (asPath !== "/" && asPath !== "/ja" && asPath !== "/en") {
