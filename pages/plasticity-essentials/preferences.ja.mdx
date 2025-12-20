@@ -1,3 +1,6 @@
+import { Tabs } from 'nextra/components'
+
+
 # 設定  
 
 設定ウィンドウを開くには、左上の P メニューをクリックし、**設定** を選択します。  
@@ -57,6 +60,22 @@ Plasticity 内で言語を切り替えることができます。変更はリア
 - ビューポートのアンビエントオクルージョンの見た目は、半径 **(1)** とフォールオフ **(2)** の設定を使用して調整します。半径の値は現在の長さ単位のパーセンテージであることに注意してください。例えば、メートルを使用していて10と入力した場合、0.1メートルに変換されます。半径は0から1000の範囲で設定でき、フォールオフは0.0から10.0の範囲です。（デフォルト値：15と0.5）
 
 ![Ambient Occlusion Settings](/img/ao-settings.png)
+
+## バックアップ
+
+- 緊急時に備えてバックアップを取得できます。  
+- 未保存のファイルが見当たらない場合は、次のディレクトリを確認してください：
+<Tabs items={['Windows', 'macOS', 'Linux']}>
+    <Tabs.Tab>
+    Navigate to `C:\Users\<UserName>\AppData\Local\Temp\plasticity` or `C:\Users\<UserName>\AppData\Local\Temp\plasticity-backup`.
+    </Tabs.Tab>
+    <Tabs.Tab>
+    Navigate to `/var/folders/<random>/T/plasticity` or `/var/folders/<random>/T/plasticity-backup`.
+    </Tabs.Tab>
+    <Tabs.Tab>
+    Navigate to `/tmp/plasticity` or `/tmp/plasticity-backup`.
+    </Tabs.Tab>
+</Tabs>
 
 ## サーバー  
 

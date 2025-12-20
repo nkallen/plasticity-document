@@ -5,7 +5,7 @@ import { Callout } from 'nextra/components'
 
 # Square 
 
-<Reference shortcut="" command="Square" button="" />
+<Reference shortcut="" command="Square" button="In Command Palette" buttonIcon='button-square' />
 
 Square ist ein auf XNurbs basierender Befehl zur Erzeugung hochwertiger, viereckiger Flächen. Er bietet präzise parametrische Kontrolle über UV-Grad und -Spans und sorgt so für eine optimale Flächendefinition.
 
@@ -33,46 +33,45 @@ Square ist ein auf XNurbs basierender Befehl zur Erzeugung hochwertiger, viereck
    - **Gewichtung (Weight):** Bestimmt, wie streng die Eingabebedingungen für Kurven und Kanten eines Volumenkörpers angewendet werden.  
        - Niedriger Wert: Lockert die Einschränkungen, verbessert die Oberflächenqualität und Reflexionen.  
        - Höherer Wert: Erzwingt die Einschränkungen, um sicherzustellen, dass der UV-Fluss mit den angegebenen *Degree*- und *Span*-Werten übereinstimmt und eine präzise Oberflächenkontinuität gewährleistet wird.  
-   - **Analysis:** Analysiert die Stetigkeit von Flächenkanten – [Stetigkeit messen](/solid/measure-continuity).
+   - **Analysis:** Analysiert die Stetigkeit von Flächenkanten – [Stetigkeit messen](/tool/measure-continuity).
          - **Continuity:** Überprüfen Sie die Stetigkeit der Kanten:
             - **G0:** Positionsstetigkeit prüfen.
             - **G1:** Tangentenstetigkeit prüfen.
             - **G2:** Krümmungsstetigkeit prüfen.
-         - **G0 Scale / G1 Scale / G2 Scale:** 
-            - Toleranzskalen für die jeweiligen Stetigkeitsprüfungen anpassen.
 4. Bestätigen Sie mit **OK** im Befehlsdialog oder durch Rechtsklick.  
 
 <VideoPlayer fileName="square"/>
 
-## Lofting mit Square
+<Callout type="info" emoji="💡">   
+Ähnlich wie bei XNurbs können Sie den Befehl im Voraus ausführen und sofort mit der Auswahl von Begrenzungskanten, Kurven und Flächen beginnen. Das beschleunigt den Arbeitsablauf effizient und liefert eine Live‑Vorschau der Oberflächenerzeugung. 
+</Callout>
+<VideoPlayer fileName="square-4"/>
 
-Alternativ kann der Square-Befehl als Lofting-Methode verwendet werden, indem zwei nicht miteinander verbundene Kanten ausgewählt werden. Diese Methode bietet eine größere Flexibilität und Kontrolle bei der Oberflächenerzeugung und ermöglicht die Anpassung von Parametern wie Grad- und Spannwerten, Randbedingungen (falls erforderlich), Flachheit und Gewichtseinfluss. Im Gegensatz dazu erzeugt ein Standard-Loft eine feste Oberfläche mit begrenzten Steuerungsoptionen.  
+## Zusätzliche Informationen
+
+### Loften mit Square
+  
+Alternativ kann der Befehl **Square** als Loft‑Methode verwendet werden, indem zwei nicht benachbarte Kanten ausgewählt werden. Diese Vorgehensweise bietet mehr Flexibilität und Kontrolle über die Oberflächenerzeugung, sodass Sie Parameter wie Grad‑ und Spannweite‑Werte, Randbedingungen (falls nötig), Flachheit und Gewichtseinfluss festlegen können. Im Gegensatz dazu erzeugt ein Standard‑Loft eine feste Oberfläche mit eingeschränkten Steuerungsoptionen.
 
 <VideoPlayer fileName="square-1"/>
 
-## Sweeping mit Square
+### Sweepen mit Square
 
-Ähnlich wie der Sweep-Befehl kann der Square-Befehl vergleichbare Ergebnisse erzielen, bietet jedoch eine größere Flexibilität und Kontrolle über die resultierenden Oberflächen. Dieses Ergebnis kann durch die Auswahl von zwei oder drei miteinander verbundenen Kanten erreicht werden.  
+Wie beim **Sweep**‑Befehl kann auch der **Square**‑Befehl vergleichbare Ergebnisse erzielen, jedoch mit größerer Flexibilität und Kontrolle über die entstehenden Flächen. Dieses Ergebnis lässt sich erreichen, indem man zwei oder drei benachbarte Kanten auswählt.
 
 <VideoPlayer fileName="square-2"/>
 
-## Patching mit Square
+### Patchen mit Square
 
-Der Square-Befehl kann Löcher in einer Oberfläche mit vierseitigen Begrenzungskanten füllen, ähnlich wie der Patch-Befehl.  
+Der **Square**‑Befehl kann Löcher in einer Fläche mit quadratisch‑seitigen Begrenzungskanten füllen, ähnlich dem **Patch**‑Befehl.
 
 <VideoPlayer fileName="square-3"/>
 
-## Refit Surfaces 
+### Flächen neu anpassen (Refit)
 
-Der Square-Befehl ermöglicht es, zugeschnittene Flächen auf einer Fläche und ihren angrenzenden Flächen selektiv anzupassen und die Orientierung der Splines an den natürlichen Fluss der Fläche anzupassen. Diese Funktion unterscheidet sich deutlich vom **Rebuild**-Befehl, der sich auf das Wiederaufbauen einer Fläche konzentriert, ohne die Orientierung der Splines auszurichten.  
+Mit dem **Square**‑Befehl können Sie selektiv beschnittene Flächen auf einer Fläche und deren angrenzenden Flächen neu anpassen und dabei die Orientierung der Splines an den natürlichen Fluss der Oberfläche angleichen. Diese Funktion unterscheidet sich deutlich vom **Rebuild**‑Befehl, der sich ausschließlich auf das Neuaufbauen einer Fläche konzentriert, ohne die Spline‑Orientierung auszurichten.
 
-<VideoPlayer fileName="square-5"/>  
-
-<Callout type="info" emoji="💡">
-**Tipp**  
-Ähnlich wie bei XNurbs können Sie den Befehl im Voraus ausführen und dann Begrenzungskanten, Kurven und Flächen auswählen. Dies beschleunigt den Workflow erheblich und bietet eine Live-Vorschau der Oberflächenerzeugung.  
-</Callout>
-<VideoPlayer fileName="square-4"/>
+<VideoPlayer fileName="square-5"/>
 
 ## Siehe auch
 - [XNurbs](xnurbs)
