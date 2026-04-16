@@ -2,43 +2,87 @@
 title: Plasticity Manual
 description: The official manual for Plasticity 3D. All keyboard shortcuts. Updated daily!
 ---
-import styles from '/styles/index.module.scss'
+import ResourceSection from "../components/ResourceSection.jsx";
 
 <div style={{margin: '2em 0'}}>
     <span style={{fontSize: '2em'}}><span style={{fontWeight: 800}}>Plasticity&nbsp;</span>Manual</span>
 </div>
 
-<div className={styles.container}>
-    <div>
-    - Command List & Shortcut Keys
-    - [Plasticity Essentials](/all-commands/plasticity-essentials)
-    - [Sketching & Primitive Tools](/all-commands/tool-commands)
-    - [Common Commands](/all-commands/common-commands)
-    - [Sketch Commands](/all-commands/sketch-commands)
-    - [Solid Commands](/all-commands/solid-commands)
-    - [Shortcut Key List (PDF)](/all-commands/download-pdf)
-    </div>
-    <div>
-    - [Getting Started](/getting-started)
-    - [3D Viewport](/plasticity-essentials)
-    </div>
-    <div>
-    **Tools**
-    - [Sketch & Primitive Tools](/tool)
-    </div>
-    <div>
-    **Commands**
-    - [Common: Sketch & Solid](/common)
-    - [Sketch](/sketch)
-    - [Solid](/solid)
-    </div>
-    <div>
-    **Integration**
-    - [Blender](/blender/introduction-blender-bridge)
-    </div>
-    <div>
-    **Advanced**
-    - [CAD Essentials](/cad-essentials)
-    - [Release Notes](/release-notes)
-    </div>
-</div>
+
+<ResourceSection
+  title="Introduction"
+  items={[
+    {
+      title: "Release Notes",
+      description: "A page where release notes are shared, documenting new features and changes as the software evolves.",
+      link: "/release-notes"
+    },
+    {
+      title: "Getting Started",
+      description: "Start using Plasticity with an overview of licensing, key features, installation steps, and support options.",
+      link: "/getting-started"
+    },
+    {
+      title: "Plasticity Essentials",
+      description: "Essentials of Plasticity, learn and understand how Plasticity functions.",
+      link: "/plasticity-essentials"
+    },
+    {
+      title: "CAD Essentials",
+      description: "Core CAD concepts and techniques for advanced users.",
+      link: "/cad-essentials"
+    },
+    {
+      title: "Command List and Shortcut Keys",
+      description: "A complete list of commands with their shortcut keys, including a downloadable PDF.",
+      link: "/all-commands"
+    }
+  ]}
+/>
+<ResourceSection
+  title="Tools"
+  items={[
+    {
+      title: "Sketch and Primitive Tools",
+      description: "Learn the tools used to sketch shapes and create basic primitives.",
+      link: "/tool"
+    },
+  ]}
+/>
+
+<ResourceSection
+  title="Commands"
+  items={[
+    {
+      title: "Common Commands",
+      description: "A combined overview of essential sketch and solid commands.",
+      link: "/common"
+    },
+    {
+      title: "Sketch",
+      description: "Commands focused on drawing and editing 2D sketches.",
+      link: "/sketch"
+    },
+    {
+      title: "Solid",
+      description: "Commands used to build and modify solid 3D forms.",
+      link: "/solid"
+    },
+  ]}
+/>
+
+<ResourceSection
+  title="Integration"
+  items={[
+    {
+      title: "Blender",
+      description: "Learn how to integrate Plasticity with Blender workflows.",
+      link: "/blender"
+    },
+    {
+      title: "Cinema 4D",
+      description: "Learn how to integrate Plasticity with Cinema 4D workflows.",
+      link: "/cinema-4d"
+    }
+  ]}
+/>

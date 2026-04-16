@@ -2,43 +2,87 @@
 title: Plasticity Handbuch
 description: Das offizielle Handbuch für Plasticity 3D. Alle Tastenkombinationen. Täglich aktualisiert!
 ---
-import styles from '/styles/index.module.scss'
+import ResourceSection from "../components/ResourceSection.jsx";
 
 <div style={{margin: '2em 0'}}>
     <span style={{fontSize: '2em'}}><span style={{fontWeight: 800}}>Plasticity&nbsp;</span>Handbuch</span>
 </div>
 
-<div className={styles.container}>
-    <div>
-    - Befehlsliste & Tastenkombinationen
-    - [Plasticity Grundlagen](/all-commands/plasticity-essentials)
-    - [Skizzieren & Primitive Werkzeuge](/all-commands/tool-commands)
-    - [Allgemeine](/all-commands/common-commands)
-    - [Skizze](/all-commands/sketch-commands)
-    - [Fest](/all-commands/solid-commands)
-    - [Tastenkürzelliste (PDF)](/all-commands/download-pdf)
-    </div>
-    <div>
-    - [Erste Schritte](/getting-started)
-    - [3D Viewport](/plasticity-essentials)
-    </div>
-    <div>
-    **Werkzeuge**
-    - [Skizzieren & Primitive Werkzeuge](/tool)
-    </div>
-    <div>
-    **Befehle**
-    - [Allgemein: Skizze & Festkörper](/common)
-    - [Skizze](/sketch)
-    - [Festkörper](/solid)
-    </div>
-    <div>
-    **Integration**
-    - [Blender](/blender/introduction-blender-bridge)
-    </div>
-    <div>
-    **Fortgeschritten**
-    - [CAD Grundlagen](/cad-essentials)
-    - [Versionshinweise](/release-notes)
-    </div>
-</div>
+<ResourceSection
+  title="Einführung"
+  items={[
+    {
+      title: "Versionshinweise",
+      description: "Eine Seite, auf der Versionshinweise geteilt werden und neue Funktionen sowie Änderungen dokumentiert sind.",
+      link: "/release-notes"
+    },
+    {
+      title: "Erste Schritte",
+      description: "Beginnen Sie mit Plasticity: Überblick über Lizenzierung, Hauptfunktionen, Installation und Support.",
+      link: "/getting-started"
+    },
+    {
+      title: "Plasticity Grundlagen",
+      description: "Grundlagen von Plasticity – lernen und verstehen, wie Plasticity funktioniert.",
+      link: "/plasticity-essentials"
+    },
+    {
+      title: "CAD Grundlagen",
+      description: "Zentrale CAD‑Konzepte und Techniken für fortgeschrittene Anwender.",
+      link: "/cad-essentials"
+    },
+    {
+      title: "Befehlsliste und Tastenkürzel",
+      description: "Eine vollständige Liste aller Befehle mit ihren Tastenkürzeln, inklusive herunterladbarer PDF.",
+      link: "/all-commands"
+    }
+  ]}
+/>
+
+<ResourceSection
+  title="Werkzeuge"
+  items={[
+    {
+      title: "Skizzen- und Primitive‑Werkzeuge",
+      description: "Erlernen Sie die Werkzeuge zum Skizzieren von Formen und Erstellen grundlegender Primitiven.",
+      link: "/tool"
+    },
+  ]}
+/>
+
+<ResourceSection
+  title="Befehle"
+  items={[
+    {
+      title: "Allgemeine Befehle",
+      description: "Eine kombinierte Übersicht über wichtige Skizzen‑ und Volumenbefehle.",
+      link: "/common"
+    },
+    {
+      title: "Skizze",
+      description: "Befehle zum Zeichnen und Bearbeiten von 2D‑Skizzen.",
+      link: "/sketch"
+    },
+    {
+      title: "Volumen",
+      description: "Befehle zum Erstellen und Bearbeiten von 3D‑Volumenkörpern.",
+      link: "/solid"
+    },
+  ]}
+/>
+
+<ResourceSection
+  title="Integration"
+  items={[
+    {
+      title: "Blender",
+      description: "Erfahren Sie, wie Sie Plasticity in Blender‑Workflows integrieren.",
+      link: "/blender"
+    },
+    {
+      title: "Cinema 4D",
+      description: "Erfahren Sie, wie Sie Plasticity in Cinema 4D‑Workflows integrieren.",
+      link: "/cinema-4d"
+    }
+  ]}
+/>

@@ -5,7 +5,17 @@ import Kst from '/components/KeyboardShortcutsTitle'
 
 # Tangent Circle 
 
-<Reference shortcut="" command="Tangent Circle" button="Toolbar"  buttonIcon='button-tangent-circle'/>
+{/* <Reference shortcut="" command="Tangent Circle" button="Toolbar"  buttonIcon='button-tangent-circle'/> */}
+
+<CommandReference
+  command="Tangent Circle"
+  shortcut=""
+  button="In Toolbar"
+  buttonIcon="/img/button-tangent-circle.png"
+  tier="both"
+/>
+
+## Description
 
 You can create a circle tangent to three curves.
 
@@ -18,6 +28,9 @@ You can create a circle tangent to three curves.
         - **Select first curve segment:** Click to select the first curve segment when it is highlighted.
         - **Select second curve segment:** Click to select the second curve segment when it is highlighted.
         - **Radius:** Specify the diameter.
+- <Kst>Keyboard Shortcuts</Kst>
+  - <kbd>F</kbd> **Freeze** - Prevents the tangent circle from moving, letting you reposition the mouse cursor for a more precise placement. Useful when you need to flip the leading direction while dragging the tangent circle.
+  - <kbd>Tab</kbd> **Radius** - Directs you to the radius field so you can enter a Radius value.
 4. Click OK in the command dialog or right-click to confirm.
 5. The circle is created.
 

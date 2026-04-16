@@ -4,38 +4,55 @@ import ButtonIcon from '/components/ButtonIcon'
 import Kst from '/components/KeyboardShortcutsTitle'
 import { Callout } from 'nextra/components'
 
-# Draft Face
+## Fläche entformen
 
-<Reference shortcut="" command="Draft Face" button="Im vorgeschlagenen Befehlsmenü"   buttonIcon='button-draft-face' />
+{/* <Reference shortcut="" command="Fläche entformen" button="Im Menü für vorgeschlagene Befehle"   buttonIcon='button-draft-face' /> */}
 
-Wenden Sie einen Neigungswinkel auf die ausgewählte Face an.
+<CommandReference
+  command="Fläche entformen"
+  shortcut=""
+  button="Im Menü für vorgeschlagene Befehle"
+  buttonIcon="/img/button-draft-face.png"
+  tier="both"
+/>
 
-## Grundlegende Nutzung
+## Beschreibung
 
-1. Wählen Sie die Fläche aus, die Sie als Referenzebene verwenden möchten.
-2. Klicken Sie auf die Schaltfläche <ButtonIcon type="button-draft-face" /> im Menü [Vorgeschlagene Befehle](/plasticity-essentials/command-bar#suggested-commands).
-3. Wählen Sie Fläche(n) mit der <kbd>Ctrl</kbd>-Taste aus, um sie zu entwerfen.
-4. Ziehen Sie den weißen Kreis, um den Entwurfswinkel festzulegen, oder verwenden Sie das Gizmo, um die Position der Referenzebene anzupassen.
-5. Stellen Sie die Optionen im Befehlsdialog und den Tastenkombinationen ein.
+Einen Entformungswinkel auf die ausgewählte Fläche anwenden.
+
+## Grundlegende Verwendung
+
+1. Die Fläche auswählen, die als Referenzebene verwendet werden soll.
+3. Fläche oder Flächen mit <kbd>Shift</kbd> zum Entformen auswählen und mit <kbd>Ctrl</kbd> die Auswahl aufheben.
+2. Im Befehlspaletten-Menü nach **Fläche entformen** suchen und ausführen.
+4. Den weißen Kreis ziehen, um den Entformungswinkel festzulegen, oder den Gizmo verwenden, um die Position der Referenzebene anzupassen.
+5. Die Optionen im Befehlsdialog und den Tastaturkürzeln festlegen.
     - <Kst>Befehlsdialog</Kst>
-        - **Degrees:** Geben Sie den Neigungswinkel an.
-        - **Grow:**
-            - Wenn die konkave innere Face geneigt wird.
-            - **Moving:** Erweitern Sie die äußere Wand, wenn die geneigte Face an die äußere Wand gelangt.
-            - **Fixed:** Stoppen Sie an der äußeren Wand.
-            - **None:** Es geht von selbst weiter, ohne die äußere Wand zu beeinflussen oder von ihr beeinflusst zu werden.
-    - <Kst>Tastenkombinationen</Kst>    
-        - <kbd>A</kbd> **Angle adjacent:** Geben Sie den Winkel durch Bewegen des Cursors an.
-6. Bestätigen Sie mit OK im Befehlsdialog oder mit einem Rechtsklick.
+        - **Grad:** Den Entformungswinkel festlegen.
+        - **Verjüngungsmethode:**
+            - **Isokline:** Behält einen konstanten Winkel entlang einer bestimmten Zugrichtung bei und stellt sicher, dass die gesamte Fläche unabhängig von der Oberflächenkrümmung eine gleichmäßige Entformung aufweist.
+            - **Kurve:** Verwendet eine ausgewählte Kurve als Dreh- oder Ankerpunkt für die Verjüngung.
+            - **Fläche:** Neigt die ausgewählten Flächen relativ zur Ausrichtung einer sekundären Referenzfläche.
+            - **Versatz:** Verschiebt den Drehpunkt der Verjüngung mithilfe des gelben Griffs von der Referenzebene weg.
+            - **Normal:** Wendet den Entformungswinkel senkrecht zur Ausgangsfläche der Referenzfläche an.
+        - **Wachsen:**
+            - Wenn die konkave innere Fläche entformt wird.
+            - **Bewegend:** Die Außenwand erweitern, wenn die entformte Fläche die Außenwand erreicht.
+            - **Fest:** An der Außenwand anhalten.
+            - **Keines:** Eigenständig weiterlaufen, ohne die Außenwand zu beeinflussen oder von ihr beeinflusst zu werden.
+    - <Kst>Tastaturkürzel</Kst>
+        - <kbd>A</kbd> **Angrenzenden Winkel:** Den Winkel durch Bewegen des Cursors festlegen.
+        - <kbd>D</kbd> **Versatz:** Die neutrale Fläche neu positionieren.
+        - <kbd>Ctrl</kbd> **Auswahl ändern:** Entformungsflächen hinzufügen oder entfernen.
+6. Mit OK im Befehlsdialog oder Rechtsklick bestätigen.
 
 <VideoPlayer fileName="draft-face"/>
 
-<Callout type="info" emoji="🗒️">
-**Note**
-Das Anwenden des Draft-Befehls auf einer nicht gleichmäßigen Fläche ist möglich, jedoch mit bestimmten Einschränkungen. Sie können den Draft-Winkel angeben, aber die Referenzebene nicht verschieben.
+<Callout type="info">
+**Hinweis:**   Das Anwenden des Entformungsbefehls auf eine ungleichmäßige Fläche ist möglich, jedoch mit bestimmten Einschränkungen. Der Entformungswinkel kann festgelegt werden, die Referenzebene kann jedoch nicht verschoben werden.
 </Callout>
 
 ## Siehe auch
-- [Offset Face](offset-face)
-- [Match Face](match-face)
-- [Delete Face](delete-face)
+- [Fläche versetzen](offset-face)
+- [Fläche anpassen](match-face)
+- [Fläche löschen](delete-face)

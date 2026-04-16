@@ -1,44 +1,88 @@
 ---
 title: Plasticity マニュアル
-description: Plasticity 3D の公式マニュアル。全キーボードショートカット掲載。日々更新中！
+description: Plasticity 3D の公式マニュアル。すべてのキーボードショートカットを掲載。毎日更新！
 ---
-import styles from '/styles/index.module.scss'
+import ResourceSection from "../components/ResourceSection.jsx";
 
 <div style={{margin: '2em 0'}}>
     <span style={{fontSize: '2em'}}><span style={{fontWeight: 800}}>Plasticity&nbsp;</span>マニュアル</span>
 </div>
 
-<div className={styles.container}>
-    <div>
-    - 全コマンド & キーボードショートカット
-    - [Plasticityの基本](/all-commands/plasticity-essentials)
-    - [スケッチ＆プリミティブツール](/all-commands/tool-commands)
-    - [共通のコマンド](/all-commands/common-commands)
-    - [スケッチコマンド](/all-commands/sketch-commands)
-    - [ソリッドコマンド](/all-commands/solid-commands)
-    - [ショートカットキー一覧 (PDF)](/all-commands/download-pdf)
-    </div>
-    <div>
-    - [はじめに](/getting-started)
-    - [3Dビューポート](/plasticity-essentials)
-    </div>
-    <div>
-    **ツール**
-    - [スケッチ & プリミティブ ツール](/tool)
-    </div>
-    <div>
-    **コマンド**
-    - [スケッチとソリッド共通](/common)
-    - [スケッチ](/sketch)
-    - [ソリッド](/solid)
-    </div>
-    <div>
-    **連携**
-    - [Blender](/blender/introduction-blender-bridge)
-    </div>
-    <div>
-    **応用**
-    - [CADエッセンシャル](/cad-essentials)
-    - [リリースノート](/release-notes)
-    </div>
-</div>
+<ResourceSection
+  title="イントロダクション"
+  items={[
+    {
+      title: "リリースノート",
+      description: "新機能や変更点を記録したリリースノートを掲載するページです。",
+      link: "/release-notes"
+    },
+    {
+      title: "はじめに",
+      description: "ライセンス、主要機能、インストール手順、サポート情報など、Plasticity を始めるための概要。",
+      link: "/getting-started"
+    },
+    {
+      title: "Plasticity 基本",
+      description: "Plasticity の仕組みを学び、理解するための基本項目です。",
+      link: "/plasticity-essentials"
+    },
+    {
+      title: "CAD 基礎",
+      description: "上級ユーザー向けの主要な CAD コンセプトとテクニック。",
+      link: "/cad-essentials"
+    },
+    {
+      title: "コマンド一覧とショートカットキー",
+      description: "すべてのコマンドとショートカットキーの完全リスト。PDF もダウンロード可能。",
+      link: "/all-commands"
+    }
+  ]}
+/>
+
+<ResourceSection
+  title="ツール"
+  items={[
+    {
+      title: "スケッチ and プリミティブツール",
+      description: "形状をスケッチし、基本的なプリミティブを作成するためのツールを学びます。",
+      link: "/tool"
+    },
+  ]}
+/>
+
+<ResourceSection
+  title="コマンド"
+  items={[
+    {
+      title: "共通コマンド",
+      description: "主要なスケッチおよびソリッドコマンドの統合概要。",
+      link: "/common"
+    },
+    {
+      title: "スケッチ",
+      description: "2D スケッチの作成と編集に特化したコマンド。",
+      link: "/sketch"
+    },
+    {
+      title: "ソリッド",
+      description: "3D ソリッド形状を構築・編集するためのコマンド。",
+      link: "/solid"
+    },
+  ]}
+/>
+
+<ResourceSection
+  title="連携"
+  items={[
+    {
+      title: "Blender",
+      description: "Plasticity を Blender ワークフローに統合する方法を学びます。",
+      link: "/blender"
+    },
+    {
+      title: "Cinema 4D",
+      description: "Plasticity を Cinema 4D ワークフローに統合する方法を学びます。",
+      link: "/cinema-4d"
+    }
+  ]}
+/>
